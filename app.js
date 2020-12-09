@@ -27,7 +27,7 @@ bot.on("inline_query",async (ctx)=>{
             title:ele.title,
             id:index,
             input_message_content:{
-                message_text:'${ele.title}\n${ele.url}\n${ele.description}'
+                message_text:ele.title+"\n"+ele.url+"\n"+ele.description
             },
             url:ele.url
         });
