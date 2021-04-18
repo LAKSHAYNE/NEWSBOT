@@ -3,6 +3,8 @@ const axios = require('axios').default;
 const bot= new telegraf("1489562418:AAETCP44MyUOmPIsWcPZdTvinu7iT1ww9Fo");
 const date=new Date();
 const year=date.getFullYear().toString();
+const express=require('express');
+const app=express();
 const month=(date.getMonth()).toString();
 const d=date.getDate().toString();
 const current=year+"-"+month+"-"+d
@@ -51,3 +53,7 @@ async function quer(que='apple'){
    return res.data.articles;
 }
 bot.launch();
+
+app.get('/',(req,res)=>res.send('newsbot up and running'))
+
+app.listen(process.env.PORT||3000,(req,res)=>console.log("newsbot running"))
