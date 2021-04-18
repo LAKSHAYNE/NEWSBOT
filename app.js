@@ -57,3 +57,4 @@ bot.launch();
 app.get('/',(req,res)=>res.send('newsbot up and running'))
 
 app.listen(process.env.PORT||3000,(req,res)=>console.log("newsbot running"))
+//heroku -----warm crag
