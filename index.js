@@ -15,6 +15,18 @@ bot.start((ctx)=>{
     ctx.reply("ready to serve");
 });
 
+bot.on("sticker", (ctx) => {
+  ctx.reply("nice sticker");
+});
+
+bot.hears("idiot", (ctx) => {
+  ctx.reply("Hey who are you calling idiot wanna get kicked out 😠");
+});
+
+bot.command("hey", (ctx) => {
+  ctx.reply("hey you called me?");
+});
+
 bot.on("inline_query",async (ctx)=>{
     //console.log();
     let q=ctx.inlineQuery.query;
